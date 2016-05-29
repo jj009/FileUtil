@@ -1,65 +1,66 @@
 package com.jj.vo;
 
-import com.jj.util.FileUtils;
+import com.jj.util.StringUtil;
 
 /**
  * Created by Administrator on 2016/5/22.
  */
-public class TransHeaderVo implements IEntity{
-    private String CLEAR_BILLNO="";
-    private String TRANS_COUNT ="";
-    private String TRANS_AMOUNT="";
-    private String 	ACPT_COUNT="";
-    private String ACPT_AMOUNT="";
-    private String REFU_COUNT="";
-    private String REFU_AMOUNT="";
-    private String FEE_COUNT="";
-    private String FEE_AMOUNT="";
-    private String BANK_TRANS_ID="";
-    private String ENDSIGN="";
+public class TransHeaderVo implements IEntity {
+
+    private String CLEAR_BILLNO = "";
+    private String TRANS_COUNT = "";
+    private String TRANS_AMOUNT = "";
+    private String ACPT_COUNT = "";
+    private String ACPT_AMOUNT = "";
+    private String REFU_COUNT = "";
+    private String REFU_AMOUNT = "";
+    private String FEE_COUNT = "";
+    private String FEE_AMOUNT = "";
+    private String BANK_TRANS_ID = "";
+    private String ENDSIGN = "";
 
     public String getCLEAR_BILLNO() {
-        return CLEAR_BILLNO;
+        return StringUtil.fillStr(CLEAR_BILLNO,40);
     }
 
     public String getTRANS_COUNT() {
-        return TRANS_COUNT;
+        return StringUtil.fillStr(TRANS_COUNT,10);
     }
 
     public String getTRANS_AMOUNT() {
-        return TRANS_AMOUNT;
+        return StringUtil.fillStr(TRANS_AMOUNT,12);
     }
 
     public String getACPT_COUNT() {
-        return ACPT_COUNT;
+        return StringUtil.fillStr(ACPT_COUNT,10);
     }
 
     public String getACPT_AMOUNT() {
-        return ACPT_AMOUNT;
+        return StringUtil.fillStr(ACPT_AMOUNT,12);
     }
 
     public String getREFU_COUNT() {
-        return REFU_COUNT;
+        return StringUtil.fillStr(REFU_COUNT,10);
     }
 
     public String getREFU_AMOUNT() {
-        return REFU_AMOUNT;
+        return  StringUtil.fillStr(REFU_AMOUNT,12);
     }
 
     public String getFEE_COUNT() {
-        return FEE_COUNT;
+        return StringUtil.fillStr(FEE_COUNT,10);
     }
 
     public String getFEE_AMOUNT() {
-        return FEE_AMOUNT;
+        return StringUtil.fillStr(FEE_AMOUNT,12);
     }
 
     public String getBANK_TRANS_ID() {
-        return BANK_TRANS_ID;
+        return StringUtil.fillStr(BANK_TRANS_ID,20);
     }
 
     public String getENDSIGN() {
-        return ENDSIGN;
+        return StringUtil.fillStr(ENDSIGN,2);
     }
 
     public void setCLEAR_BILLNO(String CLEAR_BILLNO) {
@@ -106,18 +107,18 @@ public class TransHeaderVo implements IEntity{
         this.ENDSIGN = ENDSIGN;
     }
 
-    public String toString(){
-        StringBuffer sb=new StringBuffer();
-        sb.append(getCLEAR_BILLNO()).append(FileUtils.splitstr);
-        sb.append(getTRANS_COUNT()).append(FileUtils.splitstr);
-        sb.append(getTRANS_AMOUNT()).append(FileUtils.splitstr);
-        sb.append(getACPT_COUNT()).append(FileUtils.splitstr);
-        sb.append(getACPT_AMOUNT()).append(FileUtils.splitstr);
-        sb.append(getREFU_COUNT()).append(FileUtils.splitstr);
-        sb.append(getREFU_AMOUNT()).append(FileUtils.splitstr);
-        sb.append(getFEE_COUNT()).append(FileUtils.splitstr);
-        sb.append(getFEE_AMOUNT()).append(FileUtils.splitstr);
-        sb.append(getBANK_TRANS_ID()).append(FileUtils.splitstr);
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append(getCLEAR_BILLNO());
+        sb.append(getTRANS_COUNT());
+        sb.append(getTRANS_AMOUNT());
+        sb.append(getACPT_COUNT());
+        sb.append(getACPT_AMOUNT());
+        sb.append(getREFU_COUNT());
+        sb.append(getREFU_AMOUNT());
+        sb.append(getFEE_COUNT());
+        sb.append(getFEE_AMOUNT());
+        sb.append(getBANK_TRANS_ID());
         sb.append(getENDSIGN());
         return sb.toString();
     }

@@ -2,23 +2,22 @@ package com.jj.util;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
-import com.jj.vo.CleanHeaderVo;
 import com.jj.vo.IEntity;
 import com.jj.vo.RefuHeadVo;
 import com.jj.vo.RefuVo;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class FileUtils {
-	public static Logger log= Logger.getLogger(FileUtils.class);
+public class FileUtil {
+	public static Logger log= Logger.getLogger(FileUtil.class);
 	public  static String splitstr="|";
 	/**
 	 * 查看某个日期文件夹内 是否已经有这个文件
@@ -71,12 +70,12 @@ public class FileUtils {
 		}
 		File file=getOrcreateFile(path,_date,filename);
 		if(_header!=null){
-			Files.write(_header.toString(),file, Charsets.UTF_8);
-            Files.append("\r\n",file, Charsets.UTF_8);
+			FileUtils.write(file,_header.toString(),"GBK",false);
+			FileUtils.writeStringToFile(file,"\r\n","GBK", true);
 		}
 		for(IEntity entity:content){
-			Files.append(entity.toString(),file,Charsets.UTF_8);
-            Files.append("\r\n",file, Charsets.UTF_8);
+			FileUtils.write(file,entity.toString(),"GBK",true);
+			FileUtils.writeStringToFile(file,"\r\n","GBK", true);
 		}
 	}
 
@@ -111,7 +110,7 @@ public class FileUtils {
         refuVo1.setREASON("8888");
         list.add(refuVo1);
         try {
-            FileUtils.createFile(refuHeadVo,list,null,"D://","ETCPMC-A-C-151016-01-0");
+            FileUtil.createFile(refuHeadVo,list,null,"D://","ETCPMC-A-C-151016-01-0");
         } catch (Exception e) {
             e.printStackTrace();
         }

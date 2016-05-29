@@ -1,126 +1,127 @@
 package com.jj.vo;
 
-import com.jj.util.FileUtils;
+import com.jj.util.StringUtil;
 
 /**
  * 清分文件
  * Created by Administrator on 2016/5/22.
  */
-public class ClearVo implements IEntity{
-    private String SYS_ID="";
-    private String REF_NO="";
-    private String TRANS_DATE="";
-    private String TRANS_TIME="";
-    private String CARD_NET_NO="";
-    private String CARD_CHIP_NO="";
-    private String TRANS_AMOUNT="";
-    private String PSAM_ID="";
-    private String TERMINAL_ID="";
-    private String TRANS_ADDR="";
-    private String TRANS_PREAMT="";
-    private String TRANS_TYPE="";
-    private String CARD_SERIALNO="";
-    private String PSAM_SERIALNO="";
-    private String CARD_RND="";
-    private String TAC="";
-    private String RESULT="";
-    private String REASON="";
-    private String FEE="";
-    private String AMOUNT="";
-    private String PARKINGIN_TRANS_DATE="";
-    private String PARKINGIN_TRANS_TIME="";
-    private String ENDSIGN="";
+public class ClearVo implements IEntity {
+
+    private String SYS_ID = "";
+    private String REF_NO = "";
+    private String TRANS_DATE = "";
+    private String TRANS_TIME = "";
+    private String CARD_NET_NO = "";
+    private String CARD_CHIP_NO = "";
+    private String TRANS_AMOUNT = "";
+    private String PSAM_ID = "";
+    private String TERMINAL_ID = "";
+    private String TRANS_ADDR = "";
+    private String TRANS_PREAMT = "";
+    private String TRANS_TYPE = "";
+    private String CARD_SERIALNO = "";
+    private String PSAM_SERIALNO = "";
+    private String CARD_RND = "";
+    private String TAC = "";
+    private String RESULT = "";
+    private String REASON = "";
+    private String FEE = "";
+    private String AMOUNT = "";
+    private String PARKINGIN_TRANS_DATE = "";
+    private String PARKINGIN_TRANS_TIME = "";
+    private String ENDSIGN = "";
 
     public String getSYS_ID() {
-        return SYS_ID;
+        return StringUtil.fillStr(SYS_ID,1);
     }
 
     public String getREF_NO() {
-        return REF_NO;
+        return StringUtil.fillStr(REF_NO,20);
     }
 
     public String getTRANS_DATE() {
-        return TRANS_DATE;
+        return StringUtil.fillStr(TRANS_DATE,8);
     }
 
     public String getTRANS_TIME() {
-        return TRANS_TIME;
+        return StringUtil.fillStr(TRANS_TIME,6);
     }
 
     public String getCARD_NET_NO() {
-        return CARD_NET_NO;
+        return StringUtil.fillStr(CARD_NET_NO,4);
     }
 
     public String getCARD_CHIP_NO() {
-        return CARD_CHIP_NO;
+        return StringUtil.fillStr(CARD_CHIP_NO,19);
     }
 
     public String getTRANS_AMOUNT() {
-        return TRANS_AMOUNT;
+        return StringUtil.fillStr(TRANS_AMOUNT,12);
     }
 
     public String getPSAM_ID() {
-        return PSAM_ID;
+        return StringUtil.fillStr(PSAM_ID,22);
     }
 
     public String getTERMINAL_ID() {
-        return TERMINAL_ID;
+        return StringUtil.fillStr(TERMINAL_ID,12);
     }
 
     public String getTRANS_ADDR() {
-        return TRANS_ADDR;
+        return StringUtil.fillStr(TRANS_ADDR,60);
     }
 
     public String getTRANS_PREAMT() {
-        return TRANS_PREAMT;
+        return StringUtil.fillStr(TRANS_PREAMT,12);
     }
 
     public String getTRANS_TYPE() {
-        return TRANS_TYPE;
+        return StringUtil.fillStr(TRANS_TYPE,2);
     }
 
     public String getCARD_SERIALNO() {
-        return CARD_SERIALNO;
+        return StringUtil.fillStr(CARD_SERIALNO,4);
     }
 
     public String getPSAM_SERIALNO() {
-        return PSAM_SERIALNO;
+        return StringUtil.fillStr(PSAM_SERIALNO,8);
     }
 
     public String getCARD_RND() {
-        return CARD_RND;
+        return StringUtil.fillStr(CARD_RND,8);
     }
 
     public String getTAC() {
-        return TAC;
+        return StringUtil.fillStr(TAC,8);
     }
 
     public String getRESULT() {
-        return RESULT;
+        return StringUtil.fillStr(RESULT,1);
     }
 
     public String getREASON() {
-        return REASON;
+        return StringUtil.fillStr(REASON,20);
     }
 
     public String getFEE() {
-        return FEE;
+        return StringUtil.fillStr(FEE,12);
     }
 
     public String getAMOUNT() {
-        return AMOUNT;
+        return StringUtil.fillStr(AMOUNT,12);
     }
 
     public String getPARKINGIN_TRANS_DATE() {
-        return PARKINGIN_TRANS_DATE;
+        return StringUtil.fillStr(PARKINGIN_TRANS_DATE,8);
     }
 
     public String getPARKINGIN_TRANS_TIME() {
-        return PARKINGIN_TRANS_TIME;
+        return StringUtil.fillStr(PARKINGIN_TRANS_TIME,6);
     }
 
     public String getENDSIGN() {
-        return ENDSIGN;
+        return StringUtil.fillStr(ENDSIGN,2);
     }
 
     public void setSYS_ID(String SYS_ID) {
@@ -215,30 +216,30 @@ public class ClearVo implements IEntity{
         this.ENDSIGN = ENDSIGN;
     }
 
-    public String toString(){
-        StringBuffer sb=new StringBuffer();
-        sb.append(getSYS_ID()).append(FileUtils.splitstr);
-        sb.append(getREF_NO()).append(FileUtils.splitstr);
-        sb.append(getTRANS_DATE()).append(FileUtils.splitstr);
-        sb.append(getTRANS_TIME()).append(FileUtils.splitstr);
-        sb.append(getCARD_NET_NO()).append(FileUtils.splitstr);
-        sb.append(getCARD_CHIP_NO()).append(FileUtils.splitstr);
-        sb.append(getTRANS_AMOUNT()).append(FileUtils.splitstr);
-        sb.append(getPSAM_ID()).append(FileUtils.splitstr);
-        sb.append(getTERMINAL_ID()).append(FileUtils.splitstr);
-        sb.append(getTRANS_ADDR()).append(FileUtils.splitstr);
-        sb.append(getTRANS_PREAMT()).append(FileUtils.splitstr);
-        sb.append(getTRANS_TYPE()).append(FileUtils.splitstr);
-        sb.append(getCARD_SERIALNO()).append(FileUtils.splitstr);
-        sb.append(getPSAM_SERIALNO()).append(FileUtils.splitstr);
-        sb.append(getCARD_RND()).append(FileUtils.splitstr);
-        sb.append(getTAC()).append(FileUtils.splitstr);
-        sb.append(getRESULT()).append(FileUtils.splitstr);
-        sb.append(getREASON()).append(FileUtils.splitstr);
-        sb.append(getFEE()).append(FileUtils.splitstr);
-        sb.append(getAMOUNT()).append(FileUtils.splitstr);
-        sb.append(getPARKINGIN_TRANS_DATE()).append(FileUtils.splitstr);
-        sb.append(getPARKINGIN_TRANS_TIME()).append(FileUtils.splitstr);
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append(getSYS_ID());
+        sb.append(getREF_NO());
+        sb.append(getTRANS_DATE());
+        sb.append(getTRANS_TIME());
+        sb.append(getCARD_NET_NO());
+        sb.append(getCARD_CHIP_NO());
+        sb.append(getTRANS_AMOUNT());
+        sb.append(getPSAM_ID());
+        sb.append(getTERMINAL_ID());
+        sb.append(getTRANS_ADDR());
+        sb.append(getTRANS_PREAMT());
+        sb.append(getTRANS_TYPE());
+        sb.append(getCARD_SERIALNO());
+        sb.append(getPSAM_SERIALNO());
+        sb.append(getCARD_RND());
+        sb.append(getTAC());
+        sb.append(getRESULT());
+        sb.append(getREASON());
+        sb.append(getFEE());
+        sb.append(getAMOUNT());
+        sb.append(getPARKINGIN_TRANS_DATE());
+        sb.append(getPARKINGIN_TRANS_TIME());
         sb.append(getENDSIGN());
         return sb.toString();
     }
