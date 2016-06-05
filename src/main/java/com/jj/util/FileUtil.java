@@ -78,7 +78,6 @@ public class FileUtil {
 			FileUtils.writeStringToFile(file,"\r\n","GBK", true);
 		}
 	}
-
     public static void main(String[] args) {
         RefuHeadVo refuHeadVo=new RefuHeadVo();
         refuHeadVo.setBANK_TRANS_ID("setBANK_TRANS_ID");
