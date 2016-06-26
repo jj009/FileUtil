@@ -3,10 +3,10 @@ package com.jj.vo;
 import com.jj.util.StringUtil;
 
 /**
- * 清分文件下行解析内容
+ * 延迟文件下行解析内容
  * Created by Administrator on 2016/5/22.
  */
-public class UpClearVo {
+public class UpDelayVo {
 
     private String SYS_ID = "";
     private String REF_NO = "";
@@ -81,8 +81,8 @@ public class UpClearVo {
         this.ENDSIGN = ENDSIGN;
     }
 
-    public static UpClearVo converFromString(String str) throws Exception {
-        UpClearVo upClearVo=new UpClearVo();
+    public static UpDelayVo converFromString(String str) throws Exception {
+    	UpDelayVo upClearVo=new UpDelayVo();
         if(org.apache.commons.lang3.StringUtils.isEmpty(str)){
             throw new Exception("需要解析的字符串为空");
         }
