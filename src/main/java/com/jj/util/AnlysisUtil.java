@@ -65,6 +65,7 @@ public class AnlysisUtil {
             while (ll.hasNext()) {
                 String line = ll.nextLine();
                 if(curt==0){
+                    curt++;
                     continue;
                 }else if(curt<endNum){
                     if(curt>=startNum){
@@ -100,6 +101,7 @@ public class AnlysisUtil {
         }
         return null;
     }
+
     
     /**
      * 黑卡文件头解析方法
@@ -308,5 +310,14 @@ public class AnlysisUtil {
             LineIterator.closeQuietly(ll);
         }
         return list;
+    }
+
+    public static void main(String[] args) {
+        File file = new File("C://Users//Administrator//Desktop/ETCPMC-A-C-151016-01-1");
+        UpCleanHeaderVo uhv = AnlysisUtil.convertFromFile(file);
+        List<UpClearVo> clearVoss = AnlysisUtil.convertFromFile(file, 1, 2);
+        System.out.println(clearVoss.toString());
+        System.out.println(uhv.toString());
+
     }
 }
